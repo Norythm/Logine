@@ -274,6 +274,7 @@
           '<div class="title-header">' +
             '<span class="bday-tag">✨ 20 • 10 • 2009 ✨</span>' +
             '<h1 class="title">Happy birthday logine</h1>' +
+            '<span class="tap-hint">🎈 Tap the balloons! ✨</span>' +
           '</div>' +
           '<div class="cakes-bottom-anchor">' +
             '<div class="cake-pod left-cake"><div class="cake-box" id="cakeBoxLeft"></div></div>' +
