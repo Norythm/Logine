@@ -165,6 +165,22 @@
     });
   }
 
+  var eyeBtn = document.getElementById('eyeBtn');
+  if (eyeBtn && pw) {
+    eyeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isPw = pw.type === 'password';
+      pw.type = isPw ? 'text' : 'password';
+      var eyeOpen = eyeBtn.querySelector('.eye-open');
+      var eyeClosed = eyeBtn.querySelector('.eye-closed');
+      if (eyeOpen && eyeClosed) {
+        eyeOpen.style.display = isPw ? 'none' : 'block';
+        eyeClosed.style.display = isPw ? 'block' : 'none';
+      }
+      pw.focus();
+    });
+  }
+
   if (openBtn) {
     openBtn.addEventListener('click', unlock);
   }
@@ -172,7 +188,7 @@
   function unlock() {
     if (built) return;
     var v = (pw ? pw.value : '').trim();
-    if (v !== '20/10/2009') {
+    if (v !== '20/10/2009' && v.replace(/[-.\s]/g, '/') !== '20/10/2009') {
       if (card) {
         card.classList.remove('shake');
         void card.offsetWidth;
