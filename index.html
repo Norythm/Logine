@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FFE4E8">
+<title>Happy Birthday Logine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&family=Great+Vibes&family=Outfit:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="dots" id="dots"></div>
+
+<!-- NEON GLASSY HEART MOUSE WAND -->
+<div id="wand" aria-hidden="true"><span class="wh"></span></div>
+
+<!-- LOCK SCREEN -->
+<div class="lock-wrap" id="lockWrap">
+  <div class="lockdeco" aria-hidden="true">
+    <span class="cloud c1"></span><span class="cloud c2"></span>
+    <span class="minib m1"></span><span class="minib m2"></span><span class="minib m3"></span>
+    <i class="lstar s1"></i><i class="lstar s2"></i><i class="lstar s3"></i><i class="lstar s4"></i><i class="lstar s5"></i><i class="lstar s6"></i>
+  </div>
+  <div class="lock-card" id="lockCard">
+    <div class="lock-seal"><span class="seal-heart"></span></div>
+    <h2>Unlock Surprise</h2>
+    <p class="hint">Enter secret date</p>
+    <input type="password" id="pw" placeholder="DD/MM/YYYY" autocomplete="off" inputmode="numeric">
+    <button id="openBtn">Open</button>
+    <div class="err" id="err" aria-live="polite">Wrong password, try again</div>
+  </div>
+</div>
+
+<!-- MULTI-STAGE CINEMATIC INTRO OVERLAY (Tap to skip supported) -->
+<div class="dark-glass-intro" id="darkGlassIntro" style="display: none;" aria-hidden="true">
+  <!-- Stage A: Milky Liquid Text Drop ("From Aser to Logine") -->
+  <div class="intro-stage stage-a" id="introStageA">
+    <h1 class="milky-text">From Aser to Logine</h1>
+  </div>
+  <!-- Stage B: Holographic Descent ("أحبش ❤️👀") -->
+  <div class="intro-stage stage-b" id="introStageB" style="display: none;">
+    <h1 class="hologram-text" dir="rtl">أحبش ❤️👀</h1>
+  </div>
+</div>
+
+<!-- MAIN STAGE -->
+<div id="stage"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
