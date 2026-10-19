@@ -192,7 +192,7 @@
   /* ==========================================================================
      4. MULTI-STAGE CINEMATIC INTRO
      Stage A (0s - 2.6s): "From Aser to Logine"
-     Stage B (2.6s - 5.2s): "أحبش ❤️👀"
+     Stage B (2.6s - 5.2s): "أحبش ❤️"
      Tap to skip anytime supported
      ========================================================================== */
   var introFinished = false;
@@ -281,7 +281,7 @@
             '<div class="cake-pod right-cake"><div class="cake-box" id="cakeBoxRight"></div></div>' +
           '</div>' +
         '</div>' +
-        '<div class="footer"><p dir="rtl">مش هشوف الفستان الأسود بقي 😉</p></div>' +
+        '<div class="footer"><p dir="rtl">مش هنشوف الفستان الأسود بقى 😉</p></div>' +
       '</div>';
 
     initCanvas();
