@@ -166,19 +166,26 @@
   }
 
   var eyeBtn = document.getElementById('eyeBtn');
+  var pwBox = document.getElementById('pwBox');
   if (eyeBtn && pw) {
-    eyeBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      var isPw = pw.type === 'password';
-      pw.type = isPw ? 'text' : 'password';
-      var eyeOpen = eyeBtn.querySelector('.eye-open');
-      var eyeClosed = eyeBtn.querySelector('.eye-closed');
-      if (eyeOpen && eyeClosed) {
-        eyeOpen.style.display = isPw ? 'none' : 'block';
-        eyeClosed.style.display = isPw ? 'block' : 'none';
+    function togglePwVisibility(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
       }
-      pw.focus();
-    });
+      var isPw = pw.type === 'password';
+      if (isPw) {
+        pw.type = 'text';
+        if (pwBox) pwBox.classList.add('revealed');
+        eyeBtn.setAttribute('aria-label', 'Hide password');
+      } else {
+        pw.type = 'password';
+        if (pwBox) pwBox.classList.remove('revealed');
+        eyeBtn.setAttribute('aria-label', 'Show password');
+      }
+    }
+
+    eyeBtn.addEventListener('click', togglePwVisibility);
   }
 
   if (openBtn) {
